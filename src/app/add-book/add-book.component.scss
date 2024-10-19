@@ -1,0 +1,41 @@
+.add-book {
+    margin-bottom: 2rem;
+    .form-group {
+        margin-right: 1rem;
+        flex: 1;
+    }
+    button {
+        flex: 0.5;
+        padding: 0.75rem;
+    }
+    .right-margin {
+        margin-right: 0.6rem;
+    }
+    .form-control {
+        padding: 0.75rem 0.75rem;
+        border: 1px solid #ced4da;
+        border-radius: 0.25rem;
+        line-height: 1.5;
+        font-size: 1rem;
+        color: #495057;
+        width: 95%;
+    }
+    .btn-close {
+        width: 10rem;
+    }
+    @media screen and (max-width: 768px) {
+        .btn-primary {
+            width: 100%;
+            margin-bottom: 1rem;
+        }
+        .btn-close {
+            width: 100%;
+        }    
+        form {
+            flex-direction: column;
+        }
+        .form-group {
+            margin: 0 0 1rem 0;    
+        }
+    }
+}

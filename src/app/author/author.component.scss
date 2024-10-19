@@ -1,0 +1,45 @@
+@import '../variable.scss';
+
+.author-container {
+    .books {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .book {
+        width: 30%;
+        box-shadow: 0px 5px $shadow;
+        padding: 0.6rem;
+        background: $white;
+        margin: 0 1.8rem 2rem 0;
+        height: 400px;
+        @media only screen and (max-width: 1281px) {
+            width: 45%;
+            margin: 0 2rem 2rem 0;
+        }
+        @media only screen and (max-width: 768px) {
+            width: 100%;
+            margin: 0 0 1rem 0;
+        }
+    }
+    .sort-icon {
+        margin: 0 2rem 1rem 0; 
+        fa-icon {
+            font-size: 1.6rem;
+            cursor: pointer;
+            color: $primary;
+        }
+    }
+    .author-info {
+        margin-bottom: 1rem;
+        padding: 1rem;
+        background: $white;
+        border-radius: 10px;
+        button {
+            margin-left: auto;
+        }
+        .birthday {
+            font-size: 0.9rem;
+        }
+    }
+}

@@ -1,0 +1,12 @@
+<div class="book-container">
+    <div class="relative-position">
+        <img class="book-img" [src]="book.imageUrl" loading="lazy" />
+        <div class="cirlce" (click)="deleteBookHandler()">
+            <fa-icon [icon]="faTrash" title="Delete book"></fa-icon>    
+        </div>
+    </div>
+    <div class="book-details flex">
+        <a class="purchase-link" [href]="book.purchaseLink" target="_blank">{{book.title}}</a>
+        <p class="publish-on">Publish on: <b>{{book.PublishDate}}</b></p>    
+    </div>
+</div>

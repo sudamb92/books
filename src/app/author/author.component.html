@@ -1,0 +1,27 @@
+<div class="author-container">
+    <div class="author-info flex" *ngIf="authorAndBooks">
+        <div>
+            <p><b>{{authorAndBooks.author | uppercase}}</b>,{{authorAndBooks.birthPlace}}</p>
+            <p class="birthday">DOB: {{authorAndBooks.birthday}}</p>    
+        </div>
+        <button class="btn-primary" (click)="showNewBookForm()">Add book</button>
+    </div>
+    <div class="clear-both"></div>
+    <div>
+        <ng-container #addNewBook></ng-container>
+    </div>
+
+    <div class="sort-icon pull-right">
+        <fa-icon [icon]="faSort" title="Sort by title" (click)="setSortBy()"></fa-icon>
+    </div>
+    <div class="clear-both"></div>
+
+    <div class="books">
+        <ng-container *ngIf="authorAndBooks?.books">
+            <div class="book" *ngFor="let book of authorAndBooks.books | sortBy: sortBy">
+                <app-books [book]="book" (deleteBookEmitter)="deleteBook($event)"></app-books>
+            </div>
+        </ng-container>
+    </div>
+
+</div>
